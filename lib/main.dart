@@ -1,6 +1,7 @@
 import 'package:day_1/home_page.dart';
 import 'package:day_1/loginPage.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main(){
   runApp(myApp());
@@ -13,7 +14,9 @@ class myApp extends StatelessWidget {
     return MaterialApp(
       title: "day1",
       theme: ThemeData(
-        primaryColor: Colors.blue.shade100
+        primaryColor: Colors.blue.shade100,
+        fontFamily: GoogleFonts.lato().fontFamily,
+        // primaryTextTheme: GoogleFonts.latoTextTheme()
       ),
       // home: HomePage(),
 
@@ -24,7 +27,7 @@ class myApp extends StatelessWidget {
       //ROUTES
 //giving initial route
 
-      initialRoute: "/home",
+      initialRoute: "/LoginPage",
       routes: {
 
         // by default it will open open / if onely / 

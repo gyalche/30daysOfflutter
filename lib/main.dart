@@ -1,4 +1,5 @@
 import 'package:day_1/home_page.dart';
+import 'package:day_1/loginPage.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -12,9 +13,25 @@ class myApp extends StatelessWidget {
     return MaterialApp(
       title: "day1",
       theme: ThemeData(
-        primaryColor: Colors.blueAccent
+        primaryColor: Colors.blue.shade100
       ),
-      home: HomePage(),
+      // home: HomePage(),
+
+      //FOR DARK THEME
+      // themeMode: ThemeMode.dark,
+      // darkTheme: ThemeData(brightness: Brightness.dark),
+
+      //ROUTES
+//giving initial route
+
+      initialRoute: "/home",
+      routes: {
+
+        // by default it will open open / if onely / 
+        "/":(context)=>LoginPage(),
+        "/HomePage":(context)=>HomePage(),
+        "/LoginPage": (context)=>LoginPage(),
+      },
     );
   }
 }

@@ -9,6 +9,13 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("catalog app"),
+        leading: Positioned(
+          left: 300,
+          child: IconButton(onPressed: (){
+            Navigator.of(context).pop();
+          }, 
+          icon: Icon(Icons.arrow_back, color: Colors.white,)),
+        ),
       ),
       drawer: Drawer(),
       body: Center(

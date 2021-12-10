@@ -1,5 +1,6 @@
+import 'package:day_1/form.dart';
 import 'package:day_1/home_page.dart';
-import 'package:day_1/loginPage.dart';
+import 'package:day_1/login_Page.dart';
 import 'package:day_1/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,7 +20,7 @@ class myApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         // primaryTextTheme: GoogleFonts.latoTextTheme()
       ),
-      debugShowCheckedModeBanner: false,
+      // debugShowCheckedModeBanner: false,
       // home: HomePage(),
 
       //FOR DARK THEME
@@ -36,6 +37,7 @@ class myApp extends StatelessWidget {
         "/":(context)=>LoginPage(),
         MyRoutes.homeRoute:(context)=>HomePage(),
         MyRoutes.loginRoute: (context)=>LoginPage(),
+        MyRoutes.singUpRoute:(context)=>textForm(),
       },
     );
   }

@@ -20,7 +20,7 @@ class myApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         // primaryTextTheme: GoogleFonts.latoTextTheme()
       ),
-      // debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       // home: HomePage(),
 
       //FOR DARK THEME
@@ -30,7 +30,7 @@ class myApp extends StatelessWidget {
       //ROUTES
 //giving initial route
 
-      initialRoute: "/",
+      initialRoute: MyRoutes.homeRoute,
       routes: {
 
         // by default it will open open / if onely / 

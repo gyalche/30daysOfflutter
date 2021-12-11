@@ -1,3 +1,4 @@
+import 'package:day_1/utils/drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,15 +10,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("catalog app"),
-        leading: Positioned(
-          left: 300,
-          child: IconButton(onPressed: (){
-            Navigator.of(context).pop();
-          }, 
-          icon: Icon(Icons.arrow_back, color: Colors.white,)),
-        ),
+        // leading: Positioned(
+        //   left: 300,
+        //   // child: IconButton(onPressed: (){
+        //   //   Navigator.of(context).pop();
+        //   // }, 
+        //   // icon: Icon(Icons.arrow_back, color: Colors.white,)),
+        // ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
       body: Center(
         child: Container(
         child: Text("Welcome to $days days of $name youtube class ")

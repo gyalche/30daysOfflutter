@@ -9,7 +9,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("catalog app"),
+        // backgroundColor: Colors.white,
+        // elevation: 0.0,
+        // iconTheme: IconThemeData(color: Colors.black;),
+        title: Text("catalog app", style: TextStyle(color:Colors.black),),
         // leading: Positioned(
         //   left: 300,
         //   // child: IconButton(onPressed: (){

@@ -1,6 +1,7 @@
 import 'package:day_1/form.dart';
 import 'package:day_1/home_page.dart';
 import 'package:day_1/login_Page.dart';
+import 'package:day_1/themes.dart';
 import 'package:day_1/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,11 +16,18 @@ class myApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "day1",
-      theme: ThemeData(
-        primaryColor: Colors.blue.shade100,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        // primaryTextTheme: GoogleFonts.latoTextTheme()
-      ),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: DarkTheme.darkTheme(context),
+      // theme: ThemeData(
+      //   primaryColor: Colors.blue.shade100,
+      //   fontFamily: GoogleFonts.lato().fontFamily,
+      //   appBarTheme: AppBarTheme(color: Colors.white,
+      //     elevation: 0.0,
+      //     iconTheme: IconThemeData(color: Colors.black),
+      //     textTheme: Theme.of(context).textTheme,
+      //   )
+      //   // primaryTextTheme: GoogleFonts.latoTextTheme()
+      // ),
       debugShowCheckedModeBanner: false,
       // home: HomePage(),
 

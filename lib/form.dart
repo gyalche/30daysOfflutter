@@ -11,7 +11,7 @@ class textForm extends StatefulWidget {
 class _textFormState extends State<textForm> {
   //form 
   final _formKey=GlobalKey<FormState>();
-
+  bool validate=false;
   //controller
 
   final TextEditingController usernameController=new TextEditingController();

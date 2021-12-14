@@ -24,15 +24,16 @@ class DarkTheme{
  static ThemeData darkTheme(BuildContext context)=>
 
  ThemeData(
-        primaryColor: Colors.blue.shade100,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        appBarTheme: AppBarTheme(color: Colors.white,
-          elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.black),
-          textTheme: Theme.of(context).textTheme,
-        )
+   brightness: Brightness.dark
+        // primaryColor: Colors.blue.shade100,
+        // fontFamily: GoogleFonts.lato().fontFamily,
+        // appBarTheme: AppBarTheme(color: Colors.white,
+        //   elevation: 0.0,
+        //   iconTheme: IconThemeData(color: Colors.black),
+        //   textTheme: Theme.of(context).textTheme,
+        );
         // primaryTextTheme: GoogleFonts.latoTextTheme()
-);
+// );
 
   
 }

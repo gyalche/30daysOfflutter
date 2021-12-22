@@ -63,7 +63,7 @@ flutter:
   assets:
     - assets/unDraw.png
     - assets/tfield.png
-    - assets/files
+    - assets/files/catalog.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

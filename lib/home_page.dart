@@ -65,17 +65,46 @@ class _HomePageState extends State<HomePage> {
       // ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child:(catalogModel.items!=null && catalogModel.items.isNotEmpty)? ListView.builder(
-          // itemCount: catalogModel.items.length,
-          itemCount: catalogModel.items.length,
-          itemBuilder: (context, index){
-            // return ItemWidget(ittm: catalogModel.items[index],);
-            return ItemWidget(
-              ittm: catalogModel.items[index],
-            );
-          },
-        ):Center(child: CircularProgressIndicator(),
+        // child:(catalogModel.items!=null && catalogModel.items.isNotEmpty)? ListView.builder(
+        //   // itemCount: catalogModel.items.length,
+        //   itemCount: catalogModel.items.length,
+        //   itemBuilder: (context, index){
+        //     // return ItemWidget(ittm: catalogModel.items[index],);
+        //     return ItemWidget(
+        //       ittm: catalogModel.items[index],
+        //     );
+        //   },
+        // ):Center(child: CircularProgressIndicator(),
+        // ), 
+
+        //USING GRIDVIEW INSTEAD OF LISTVIEW.BUILDER
+        child: (catalogModel.items!=null&&catalogModel.items.isNotEmpty)?
+        GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 15,
+          mainAxisSpacing:15,
+          ),
+         itemBuilder: (context, index){
+           final item=catalogModel.items[index];
+           return Card(
+             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+             clipBehavior: Clip.antiAlias,
+             child: GridTile(
+               header: Container(
+                 child: Text(item.name, style: TextStyle(color: Colors.white),),
+                 padding: const EdgeInsets.all(12),
+                 decoration: BoxDecoration(color: Colors.deepPurple),
+                 ),
+               child: Image.network(item.image),
+               footer: Text(item.price.toString()),
+               )
+          );
+         },
+         itemCount: catalogModel.items.length,
+        ):Center(
+          child: CircularProgressIndicator(),
         )
+      
       ),
       
     );

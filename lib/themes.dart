@@ -6,8 +6,9 @@ class MyTheme{
 
  ThemeData(
         primaryColor: Colors.blue.shade100,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        appBarTheme: AppBarTheme(color: Colors.white,
+        fontFamily: GoogleFonts.poppins().fontFamily,
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
           elevation: 0.0,
           iconTheme: IconThemeData(color: Colors.black),
           textTheme: Theme.of(context).textTheme,
@@ -15,7 +16,8 @@ class MyTheme{
         // primaryTextTheme: GoogleFonts.latoTextTheme()
 );
 
-  
+  static Color creamColor=Color(0xfff5f5f5);
+static Color darkBluishColor=Color(0xff403b58);
 }
 
 
@@ -34,6 +36,8 @@ class DarkTheme{
         );
         // primaryTextTheme: GoogleFonts.latoTextTheme()
 // );
+
+//COLOR
 
   
 }

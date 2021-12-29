@@ -32,11 +32,12 @@ class HomeDetailPage extends StatelessWidget {
         // child: SingleChildScrollView(
           child: Column(
             children:[
+              
               Hero(
                 tag: Key(catalog.id.toString()),
                 child: Image.network(catalog.image),
                 
-                ).h32(context).py(12),
+                ).h32(context),
                 Expanded(
                   child: VxArc(
                     height: 30,
@@ -50,8 +51,8 @@ class HomeDetailPage extends StatelessWidget {
                         catalog.name.text.xl4.bold.make(),
                         "\$${catalog.price}".text.xl2.bold.make().py12()
                       ],
-                    ),
-                  ).py64(),
+                    ).py32(),
+                  ),
                   ))
             ]
           ),

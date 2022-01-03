@@ -12,21 +12,27 @@ class HomeDetailPage extends StatelessWidget {
     
     return Scaffold(
       
-      appBar: AppBar(),
-      backgroundColor: MyTheme.creamColor,
-      bottomNavigationBar: ButtonBar(
-        alignment: MainAxisAlignment.spaceBetween,
-        children: [
-          "\$${catalog.price}".text.xl2.bold.make(),
-          ElevatedButton(onPressed: (){},
-          style: ButtonStyle(
-            backgroundColor:MaterialStateProperty.all(MyTheme.darkBluishColor),
-            shape: MaterialStateProperty.all(StadiumBorder())
-          ),
-           child: "Buy".text.make()
-          ).w20(context)
-        ],
-      ).p12(),
+      appBar: AppBar(
+         backgroundColor: Colors.transparent,
+        //  iconTheme: IconThemeData(color: Colors.white),
+      ),
+     backgroundColor: context.canvasColor,
+      bottomNavigationBar: Container(
+        color: context.cardColor,
+        child: ButtonBar(
+          alignment: MainAxisAlignment.spaceBetween,
+          children: [
+            "\$${catalog.price}".text.xl2.bold.red500.make(),
+            ElevatedButton(onPressed: (){},
+            style: ButtonStyle(
+              backgroundColor:MaterialStateProperty.all(MyTheme.darkBluishColor),
+              shape: MaterialStateProperty.all(StadiumBorder())
+            ),
+             child: "Add to cart".text.make()
+            ).wh(120, 50)
+          ],
+        ).p12(),
+      ),
       body: SafeArea(
         bottom: false,
         // child: SingleChildScrollView(
@@ -35,7 +41,7 @@ class HomeDetailPage extends StatelessWidget {
               
               Hero(
                 tag: Key(catalog.id.toString()),
-                child: Image.network(catalog.image),
+                child: Image.network(catalog.image).pOnly(top: 10),
                 
                 ).h32(context),
                 Expanded(
@@ -44,20 +50,22 @@ class HomeDetailPage extends StatelessWidget {
                     arcType: VxArcType.CONVEY,
                     edge: VxEdge.TOP,
                     child: Container(
-                    color: Colors.white,
+                    color: context.cardColor,
                     width: context.screenWidth,
                     child: Column(
                       children: [
-                        catalog.name.text.xl4.bold.make(),
-                        "\$${catalog.price}".text.xl2.bold.make().py12()
+                        catalog.name.text.color(context.accentColor).xl4.bold.make(),
+                        "\$${catalog.price}".text.xl2.bold.make().py12(),
+                        4.heightBox,
+                        "Ever not within the in and time like his. Flatterers said did name times mine and thence had, to dome.".text.make().p8()
                       ],
-                    ).py32(),
+                    ).py64(),
                   ),
                   ))
             ]
           ),
-        ),
-      
+        // ),
+      )
     );
   }
 }

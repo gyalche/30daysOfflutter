@@ -3,6 +3,8 @@ import 'package:day_1/themes.dart';
 import 'package:day_1/utils/drawer.dart';
 import 'package:day_1/utils/home_widgets/catalog_header.dart';
 import 'package:day_1/utils/home_widgets/catalog_list.dart';
+import 'package:day_1/utils/routes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -46,7 +48,18 @@ class _HomePageState extends State<HomePage> {
     
     // final dummyList= List.generate(4, (index)=>catalogModel.items[0]);
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
+      // backgroundColor: MyTheme.creamColor,
+      //IF you dont use velocity x then
+          // backgroundColor:MyTheme.of(context).cardColor
+      backgroundColor:context.canvasColor,
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.pushNamed(context, MyRoutes.cartRoute);
+        },
+        // backgroundColor: context.theme.buttonColor,
+        backgroundColor: MyTheme.darkBluishColor,
+        child: Icon(CupertinoIcons.cart, color: Colors.white,),
+      ),
       body: SafeArea(
         
         child: Container(

@@ -1,3 +1,4 @@
+import 'package:day_1/cart_page.dart';
 import 'package:day_1/form.dart';
 import 'package:day_1/home_page.dart';
 import 'package:day_1/login_Page.dart';
@@ -15,9 +16,10 @@ class myApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "day1",
+      
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
-      darkTheme: DarkTheme.darkTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       // theme: ThemeData(
       //   primaryColor: Colors.blue.shade100,
       //   fontFamily: GoogleFonts.lato().fontFamily,
@@ -38,7 +40,7 @@ class myApp extends StatelessWidget {
       //ROUTES
 //giving initial route
 
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
 
         // by default it will open open / if onely / 
@@ -46,6 +48,7 @@ class myApp extends StatelessWidget {
         MyRoutes.homeRoute:(context)=>HomePage(),
         MyRoutes.loginRoute: (context)=>LoginPage(),
         MyRoutes.singUpRoute:(context)=>textForm(),
+        MyRoutes.cartRoute:(context)=>CartPage()
       },
     );
   }

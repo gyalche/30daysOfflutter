@@ -16,7 +16,8 @@ class CatalogList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: catalogModel.items.length,
       itemBuilder: (context, index){
-        final catalog=catalogModel.items[index];
+        // final catalog=catalogModel.items[index];
+        final catalog=catalogModel.getByPosition(index);
         return InkWell(
           onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeDetailPage(catalog: catalog))),
           child: CatalogItem(
@@ -72,7 +73,7 @@ class CatalogItem extends StatelessWidget {
             ))
         ],
       )
-    ).color(context.cardColor).rounded.square(150).make().py(16);
+    ).color(context.cardColor).rounded.color(Colors.black).square(150).make().py(16);
       
     
   }

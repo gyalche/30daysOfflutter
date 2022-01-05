@@ -40,7 +40,7 @@ class myApp extends StatelessWidget {
       //ROUTES
 //giving initial route
 
-      initialRoute: MyRoutes.loginRoute,
+      initialRoute: MyRoutes.homeRoute,
       routes: {
 
         // by default it will open open / if onely / 

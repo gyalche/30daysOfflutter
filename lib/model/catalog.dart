@@ -14,6 +14,14 @@ class catalogModel{
         color: "Mat black", 
         image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftech.hindustantimes.com%2Fphotos%2Fapple-iphone-13-pro-max-in-pictures-is-this-the-best-iphone-71632468915902.html&psig=AOvVaw1fbJuaLAIDJc-kk692xc_H&ust=1639506196434000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOCHn9Wy4fQCFQAAAAAdAAAAABAD")
     ];
+    //get item by ID
+    static Item getById(int id){
+      return items.firstWhere((element) => element.id==id, orElse: null);
+    }
+    //get item by position
+    static Item getByPosition(int pos){
+      return items[pos];
+    }
 }
 class Item {
   final int id;

@@ -1,3 +1,4 @@
+
 import 'package:day_1/themes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -41,9 +42,10 @@ class _cartTotal extends StatelessWidget {
           ElevatedButton(
             onPressed: (){},
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Vx.purple500)
+              backgroundColor: MaterialStateProperty.all(Vx.purple500),
+              
             ),
-            child: "Buy".text.white.make()
+            child: "Buy".text.xl.white.make()
             ).wOneThird(context)
           
         ],
@@ -67,7 +69,11 @@ class __cartListState extends State<_cartList> {
         ListTile(
           leading: Icon(Icons.done),
           trailing: IconButton(
-            onPressed: (){},
+            onPressed: (){
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                content: "Buying not supported yet".text.make(),
+              ));
+            },
              icon: Icon(Icons.remove_circle_outline),
              ),
              title: "item 1".text.make(),
@@ -75,4 +81,6 @@ class __cartListState extends State<_cartList> {
       
     );
   }
+
+ 
 }

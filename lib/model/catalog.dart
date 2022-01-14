@@ -2,6 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 class catalogModel{
+  //creating singleton
+  static final catModel=catalogModel._internal();
+
+  catalogModel._internal();
+  factory catalogModel()=>catModel;
   // we made it static because we can access directly with catalogModel
  static List<Item> items=
 
@@ -15,11 +20,11 @@ class catalogModel{
         image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftech.hindustantimes.com%2Fphotos%2Fapple-iphone-13-pro-max-in-pictures-is-this-the-best-iphone-71632468915902.html&psig=AOvVaw1fbJuaLAIDJc-kk692xc_H&ust=1639506196434000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOCHn9Wy4fQCFQAAAAAdAAAAABAD")
     ];
     //get item by ID
-    static Item getById(int id){
+     Item getById(int id){
       return items.firstWhere((element) => element.id==id, orElse: null);
     }
     //get item by position
-    static Item getByPosition(int pos){
+     Item getByPosition(int pos){
       return items[pos];
     }
 }

@@ -37,6 +37,7 @@ dependencies:
   # dependencies:
   google_fonts: ^2.1.0
   velocity_x: ^3.3.0
+  motion_toast: ^2.0.0
 
 dev_dependencies:
   flutter_test:
